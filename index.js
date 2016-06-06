@@ -5,7 +5,7 @@ module.exports = (message) => {
     exec('git add -A', (err, stdout, stderr) => {
     	if(err) throw err;
     	console.log(stdout);
-        message = message || 'Upated at ' + moment().format('f');
+        message = message || 'Updated at ' + moment().format('f');
     	exec(`git commit -m "${message}"`, (err, stdout, stderr) => {
     		if(err) throw err;
     		console.log(stdout);
